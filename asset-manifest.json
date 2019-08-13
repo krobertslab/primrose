@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/primrose/static/css/main.2cce8147.chunk.css",
-    "main.js": "/primrose/static/js/main.8639eb4c.chunk.js",
-    "main.js.map": "/primrose/static/js/main.8639eb4c.chunk.js.map",
+    "main.js": "/primrose/static/js/main.9b7478c1.chunk.js",
+    "main.js.map": "/primrose/static/js/main.9b7478c1.chunk.js.map",
     "runtime~main.js": "/primrose/static/js/runtime~main.275d04a5.js",
     "runtime~main.js.map": "/primrose/static/js/runtime~main.275d04a5.js.map",
     "static/css/2.2ecbed3e.chunk.css": "/primrose/static/css/2.2ecbed3e.chunk.css",
     "static/js/2.add80f5a.chunk.js": "/primrose/static/js/2.add80f5a.chunk.js",
     "static/js/2.add80f5a.chunk.js.map": "/primrose/static/js/2.add80f5a.chunk.js.map",
     "index.html": "/primrose/index.html",
-    "precache-manifest.5e5d495c8b19932d367554aaa29b1971.js": "/primrose/precache-manifest.5e5d495c8b19932d367554aaa29b1971.js",
+    "precache-manifest.ca40f5269b5a69a65abd03b57623d12e.js": "/primrose/precache-manifest.ca40f5269b5a69a65abd03b57623d12e.js",
     "service-worker.js": "/primrose/service-worker.js",
     "static/css/2.2ecbed3e.chunk.css.map": "/primrose/static/css/2.2ecbed3e.chunk.css.map",
     "static/css/main.2cce8147.chunk.css.map": "/primrose/static/css/main.2cce8147.chunk.css.map"
