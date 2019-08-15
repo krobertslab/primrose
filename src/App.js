@@ -10,9 +10,10 @@ function App() {
     <div className="App">
       <Router>
         <Nav></Nav>
-        <Route path="/PMSE/" exact component={Pages.Home}></Route>
-        <Route path="/PMSE/abstracts" exact component={Pages.Abstracts}></Route>
-        <Route path="/PMSE/trials" exact component={Pages.ClinicalTrials}></Route>
+        <Route path="/primrose/" exact component={Pages.Home}></Route>
+        <Route path="/primrose/jsonabstracts" exact component={Pages.JSONABS}></Route>
+        <Route path="/primrose/jsonatrials" exact component={Pages.JSONTRIALS}></Route>
+       
         <Footer></Footer>
        </Router>
     </div>

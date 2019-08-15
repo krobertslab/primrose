@@ -1,0 +1,83 @@
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "multi_match": {
+                        "query": "{{Disease}}",
+                        "fields": [
+                            "brief_title",
+                            "brief_summary",
+                            "mesh_term",
+                            "keyword",
+                            "condition",
+                            "eligibility"
+                        ],
+                        "tie_breaker": 0.4,
+                        "type": "best_fields",
+                        "boost": 1.5
+                    }
+                },
+                {
+                    "bool": {
+                        "should": [
+                            {
+                                "multi_match": {
+                                    "query": "{{Gene}}",
+                                    "fields": [
+                                        "brief_title",
+                                        "brief_summary",
+                                        "mesh_term",
+                                        "keyword",
+                                        "condition",
+                                        "eligibility"
+                                    ],
+                                    "tie_breaker": 0.4,
+                                    "type": "cross_fields",
+                                    "boost": 1
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "match_all": {
+                        "boost": 0.001
+                    }
+                },
+                {
+                    "range": {
+                        "minimum_age": {
+                            "lte": "{{Age}}",
+                            "boost": 2
+                        }
+                    }
+                },
+                {
+                    "range": {
+                        "maximum_age": {
+                            "gte": "{{Age}}",
+                            "boost": 2
+                        }
+                    }
+                },
+                {
+                    "bool": {
+                        "should": [
+                            {
+                                "match": {
+                                    "gender": "{{gender}}"
+                                }
+                            },
+                            {
+                                "match": {
+                                    "gender": "ALL"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

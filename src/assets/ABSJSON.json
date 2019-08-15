@@ -1,0 +1,51 @@
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "multi_match": {
+                        "query": "{{Disease}}",
+                        "fields": [
+                            "text",
+                            "mesh_terms"
+                        ],
+                        "tie_breaker": 0.4,
+                        "type": "best_fields",
+                        "boost": 1.5
+                    }
+                },
+                {
+                    "bool": {
+                        "should": [
+                            {
+                                "multi_match": {
+                                    "query": "{{Gene}}",
+                                    "fields": [
+                                        "text",
+                                        "mesh_terms"
+                                    ],
+                                    "tie_breaker": 0.4,
+                                    "type": "cross_fields",
+                                    "boost": 1
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "should": [
+                {
+                    "multi_match": {
+                        "query": "{{gender}}",
+                        "fields": [
+                            "mesh_terms"
+                        ],
+                        "tie_breaker": 0.4,
+                        "type": "best_fields",
+                        "boost": 1
+                    }
+                }
+            ]
+        }
+    }
+}

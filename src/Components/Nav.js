@@ -23,13 +23,12 @@ export default class Home2 extends React.Component {
                     <Navbar bg="light" variant="light" expand="lg">
                         <Navbar.Brand href="#home">
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                        {' Precision Medicine Search Engine'}
+                        {' PRIMROSE'}
                         </Navbar.Brand>
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto">
                                     <Nav.Link href="/primrose/">Home</Nav.Link>
-                                    <Nav.Link href="/primrose/abstracts">Abstracts</Nav.Link>
-                                    <Nav.Link href="/primrose/trials">Clinical Trials</Nav.Link>
+                                    
                             </Nav>
 
                         </Navbar.Collapse>
