@@ -11,8 +11,8 @@ function App() {
       <Router>
         <Nav></Nav>
         <Route path="/primrose/" exact component={Pages.Home}></Route>
-        <Route path="/primrose/jsonabstracts" exact component={Pages.JSONABS}></Route>
-        <Route path="/primrose/jsonatrials" exact component={Pages.JSONTRIALS}></Route>
+        <Route path="/primrose/jsonabstracts/" exact component={Pages.JSONABS}></Route>
+        <Route path="/primrose/jsontrials/" exact component={Pages.JSONTRIALS}></Route>
        
         <Footer></Footer>
        </Router>
